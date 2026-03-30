@@ -11,6 +11,7 @@ from crewai_tools import SerperDevTool
 
 @CrewBase
 class DebateSystem():
+    
 
     agents: list[BaseAgent]
     tasks: list[Task]
@@ -19,16 +20,18 @@ class DebateSystem():
     def scientist(self) -> Agent:
         return Agent(
             config=self.agents_config['scientist'],
-            llm=os.getenv("MODEL", "llama3.1:latest"),
+            llm=os.getenv("MODEL", "llama3.3:70b"),
             tools=[SerperDevTool()],
+            max_iter=5,
             verbose=True
         )
     @agent
     def skeptic(self) -> Agent:
         return Agent(
             config=self.agents_config['skeptic'],
-            llm=os.getenv("MODEL", "llama3.1:latest"),
+            llm=os.getenv("MODEL", "llama3.3:70b"),
             tools=[SerperDevTool()],
+            max_iter=5,
             verbose=True
         )
 
@@ -36,8 +39,9 @@ class DebateSystem():
     def pragmatist(self) -> Agent:
         return Agent(
             config=self.agents_config['pragmatist'],
-            llm=os.getenv("MODEL", "llama3.1:latest"),
+            llm=os.getenv("MODEL", "llama3.3:70b"),
             tools=[SerperDevTool()],
+            max_iter=5,
             verbose=True
         )
 
@@ -45,8 +49,9 @@ class DebateSystem():
     def ethicist(self) -> Agent:
         return Agent(
             config=self.agents_config['ethicist'],
-            llm=os.getenv("MODEL", "llama3.1:latest"),
+            llm=os.getenv("MODEL", "llama3.3:70b"),
             tools=[SerperDevTool()],
+            max_iter=5,
             verbose=True
         )
 
@@ -54,8 +59,9 @@ class DebateSystem():
     def moderator(self) -> Agent:
         return Agent(
             config=self.agents_config['moderator'],
-            llm=os.getenv("MODEL", "llama3.1:latest"),
+            llm=os.getenv("MODEL", "llama3.3:70b"),
             tools=[SerperDevTool()],
+            max_iter=5,
             verbose=True
         )
 
