@@ -1,0 +1,30 @@
+scientist_task:
+  description: >
+    Provide a scientific and evidence-based perspective on {topic}.
+  expected_output: >
+    A well‑reasoned scientific argument with references to evidence and studies.
+
+skeptic_task:
+  description: >
+    Critically challenge existing arguments about {topic}.
+  expected_output: >
+    A list of weaknesses, assumptions, and counter‑arguments with reasoning.
+
+pragmatist_task:
+  description: >
+    Evaluate real‑world feasibility of {topic}.
+  expected_output: >
+    A practical analysis focusing on implementation challenges, costs, and benefits.
+
+ethicist_task:
+  description: >
+    Analyze ethical and societal implications of {topic}.
+  expected_output: >
+    An ethical evaluation highlighting potential harms, benefits, fairness issues.
+
+moderator_task:
+  description: >
+    Review all perspectives on {topic}.
+    Summarize key arguments and provide a final balanced conclusion.
+  expected_output: >
+    A comprehensive summary of all perspectives and a balanced conclusion.
